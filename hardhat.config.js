@@ -2,9 +2,13 @@ require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 require("hardhat-gas-reporter");
+require('@openzeppelin/hardhat-upgrades');
+
 require('dotenv').config();
 
-const { ALCHEMY_API_URL_ROPSTEN, ALCHEMY_API_URL_RINKEBY, ALCHEMY_API_URL_MAINNET, METAMASK_PRIVATE_KEY_ROPSTEN_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_RINKEBY_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_MAINNET_MINTERS_WALLET, ETHERSCAN_API_KEY } = process.env;
+//const { METAMASK_PRIVATE_KEY_ROPSTEN_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_RINKEBY_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_MAINNET_MINTERS_WALLET, ETHERSCAN_API_KEY } = process.env;
+
+const { ALCHEMY_API_URL_ROPSTEN, ALCHEMY_API_URL_RINKEBY, ALCHEMY_API_URL_MAINNET, METAMASK_PRIVATE_KEY_ROPSTEN_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_RINKEBY_PERSONAL_WALLET, METAMASK_PRIVATE_KEY_MAINNET_MINTERS_WALLET, ETHERSCAN_API_KEY } = require('./secrets.json');
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
