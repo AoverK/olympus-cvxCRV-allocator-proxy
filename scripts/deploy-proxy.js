@@ -30,11 +30,7 @@ async function main() {
     const cvxCRVProxyContract = await upgrades.deployProxy(cvxCRVAllocatorProxyContract, [implementationContractAddress, adminContractAddress, bytesMemory]);
     await cvxCRVProxyContract.deployed();
     console.log("cvxCRV deployed to: ", cvxCRVImplementationContract.address)
-        //const cvxCRVProxyContract = await hre.ethers.getContractFactory("cvxCRV Allocator Proxy"); //Proxy contract
 
-    // Upgrading
-    //const BoxV2 = await ethers.getContractFactory("BoxV2");
-    //const upgraded = await upgrades.upgradeProxy(instance.address, BoxV2);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
